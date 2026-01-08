@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <title>The best passsword manager</title>
+</head>
+<body>
+    <header>
+        <h1>The BEST password manager available (and it's FREE)</h1>
+    </header>
+    <main>
+    <a href="../blog.html" class="button">Blog Index</a><a href="../index.html" class="button">Home Page</a>
+        <h2>About Pass and GPG</h2>
+            <p>Pass uses your GPG key to encrypt and decrypt the passwords that you save. This way only you (or other people who have your private key) can view the passwords</p>
+            <p>There are many plugins to use with Pass. I'll cover some of them on this article</p>
+        <h2>How to install GPG and Pass</h2>
+            <p>Arch Linux: <code>sudo pacman -S gnupg pass</code></p>
+            <p>Debian/Ubuntu: <code>sudo apt install gnupg pass</code></p>
+            <p>Fedora: <code>sudo dnf install gnupg pass</code></p>
+        <h2>How to setup GPG and Pass</h2>
+            <p>First we have to setup your GPG key, to do run</p>
+            <code>gpg --full-gen-key</code>
+            <p>This will generate a private and a public key <b>NEVER</b> send your private key to anyone</p>
+            <p>Select option 1 and fill the required information. You are not creating a account or something like that, the email address is only for identification (you can even type a fake email and name)</p>
+            <p>To setup Pass run</p>
+            <code>pass init <i>email address you used to setup GPG</i></code>
+        <h2>How to use Pass</h2>
+            <p>To add a password to Pass run</p>
+            <code>pass add <i>nameofthepass</i></code>
+            <p>To generate a random password run</p>
+            <code>pass generate <i>nameofthepass</i></code>
+            <p>To view your stored password run</p>
+            <code>pass <i>nameofthesavedpass</i></code>
+            <p>To save more than a password run (for example username, email, url)</p>
+            <code>pass add -m <i>nameofthepass</i></code>
+            <p>To save passwords on "folders" run</p>
+            <code>pass add <i>group/nameofthepass</i></code>
+            <p>To copy a password to the clipboard run</p>
+            <code>pass -c <i>nameofthesavedpass</i></code>
+            <p>To remove a password run</p>
+            <code>pass remove <i>nameofthesavedpass</i></code>
+        <h2>Pass GUI</h2>
+            <p>If you wish you can use pass with a GUI using <a href="https://qtpass.org/">qtpass</a></p>
+            <p>You can also use <a href="https://github.com/cdown/passmenu">passmenu</a> for a dmenu/rofi menu</p>
+            <p>There are also browser extensions like <a href="https://github.com/browserpass/browserpass-extension">BrowserPass</a></p>
+        <h2>Some Pass plugins</h2>
+            <ul>
+                <li><a href="https://github.com/roddhjav/pass-import">pass-import</a> is a great plugin if you used another password manager before Pass</li>
+                <li><a href="https://github.com/tadfisher/pass-otp">pass-otp</a> is a alternative to Google Authenticator</li>
+            </ul>
+        <a href="../blog.html" class="button">Blog Index</a><a href="../index.html" class="button">Home Page</a>
+        <h2>More information</h2>
+            <p>If you need more information you can <a href="../index.html#contact">contact me</a></p>
+    </main>    
+</body>
+</html>

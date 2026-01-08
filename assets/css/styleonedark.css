@@ -1,0 +1,105 @@
+/*Based on One Dark color scheme*/
+
+main {
+	margin: auto;
+	color: #ddd;
+	background: #191f2c;
+	padding: 2px ;
+	border-radius: 25px ;
+    max-width: 1200px;
+}
+h1 {
+    text-align: center;
+    font-size: 52px;
+    color: #29354d;
+}
+h2 {
+    left: 3%;
+    position: relative;
+    font-size: 38px;
+    color: #61afef;
+    padding-top: 5px;
+}
+h3 {
+    font-size: 26px;
+    margin-left: 3%;
+    color: #88C0D0;
+}
+html {
+    background-color: #1C2330;
+}
+img {
+    float: right;
+    margin: 3%;
+    border: 3px solid #EBCB8B;
+    border-radius: 15px;
+    max-height: 225px;
+    max-width: 225px;
+}
+a {
+    color: #BF616A;
+}
+a:link {
+    color: #BF616A;
+    text-decoration: none;
+}
+a:visited {
+    color: #BF616A;
+}
+a:hover {
+    color:#EBCB8B;
+}
+ul {
+    list-style: none;
+}
+li {
+    font-size: 24px;
+}
+li::before {
+    content: "• ";
+    color: #EBCB8B;
+}
+p {
+    font-size: 24px;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.blog a {
+    color: #8FBCBB;
+}
+.blog a:link {
+    color: #8FBCBB;
+}
+.blog a:hover {
+    color: #81A1C1;
+}
+code {
+    font-size: 16px;
+    margin-left: 3%;
+    margin-right: 3%;
+    display: inline-block;
+    background-color: #2E3440;
+    border-radius: 5px;
+    padding: 5px;
+}
+a.button {
+    float: right;
+    color: #5E81AC;
+    background-color: #2E3440;
+    padding: 15px 32px;
+    border-radius: 25px;
+}
+a.buttonnord {
+    float: right;
+    color: #5E81AC;
+    background-color: #2E3440;
+    padding: 15px 32px;
+    border-radius: 25px;
+}
+a.buttonone {
+    float: right;
+    color: #5E81AC;
+    background-color: #2E3440;
+    padding: 15px 32px;
+    border-radius: 25px;
+}

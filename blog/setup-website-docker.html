@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <title>How to setup and host a website on your own PC with Docker</title>
+</head>
+<body>
+    <header>
+        <h1>How to setup a website on your own PC with Docker</h1>
+    </header>
+    <main>
+        <a href="../blog.html" class="button">Blog Index</a><a href="../index.html" class="button">Home Page</a>
+        <h2>What is Docker?</h2>
+            <p>If you already know what Docker is, click <a>here</a></p>
+            <p>Think of Docker as a lightweight virtual machine that you can run on system startup. There are a lot of images to choose from, some with specific purposes like to run a Web Server or to install a specific app.</p>
+            <p>Docker is great if you want to self host stuff without polluting your PC with config files, logs, etc</p>
+        <h2>Installing Docker</h2>
+            <p>On Debian/Ubuntu</p><code>sudo apt install docker</code>
+            <p>On Fedora 34</p><code>Follow <a href="https://docs.docker.com/engine/install/fedora/#install-using-the-repository">this</a> guide</code>
+            <p>On Arch/Manjaro</p><code>sudo pacman -S docker</code>
+            <p>Starting/Enabling Docker service</p><code>sudo systemctl enable --now docker.service</code>
+            <p>On Windows 10</p><code>Follow <a href="https://docs.docker.com/docker-for-windows/install/">this</a> guide</code>
+        <h2>Installing and running a image</h2>
+            <p>For this tutorial I will be using the official Debian image but you can choose another image <a href="https://hub.docker.com/">here</a></p>
+            <p>You can pull the image using this command</p>
+            <code>docker pull debian</code>
+            <p>To run the image run this command. You can change the name to whatever you want, you can also change the ports but I don't recommend doing it</p>
+            <code>docker run -t -d -p 80:80 -p 443:443 --name website debian:latest</code>
+        <h2>Installing packages inside the container</h2>
+            <p>To run a bash shell inside the container run</p>
+            <code>docker exec -it website bash</code>
+            <p>Now let's install some packages</p>
+            <code>apt update && apt install nginx certbot python3-certbot python3-openssl openssl python3-certbot-nginx nano && service start nginx</code>
+        <h2>Checking if it works</h2>
+            <p>On your host machine open your browser and access <a href="localhost">localhost</a></p>
+            <p>If that doesn't work allow port 80 on your firewall and try again</p>
+        <h2>Configuring nginx</h2>
+            <p>The directory of the nginx website is probably <code style="margin-left: 0;">/var/www/html</code> and the config files are on <code style="margin-left: 0;">/etc/nginx</code></p>
+
+        <a href="../blog.html" class="button">Blog Index</a><a href="../index.html" class="button">Home Page</a>
+        <h2>More information</h2>
+            <p>If you need more information you can <a href="../index.html#contact">contact me</a></p>
+    </main>    
+</body>
+</html>

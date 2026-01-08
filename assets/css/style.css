@@ -1,0 +1,90 @@
+/*Based on Nord (nordtheme.com) and One Dark color schemes*/
+
+main {
+	margin: auto;
+	color: #ddd;
+	background: #2e3440;
+	padding: 2px ;
+	border-radius: 25px ;
+    max-width: 1200px;
+}
+h1 {
+    text-align: center;
+    font-size: 52px;
+    color: #4C566A;
+}
+h2 {
+    left: 3%;
+    position: relative;
+    font-size: 38px;
+    color: #61afef;
+    padding-top: 5px;
+}
+h3 {
+    font-size: 26px;
+    margin-left: 3%;
+    color: #56b6c2;
+}
+html {
+    background-color: #1C2330;
+}
+img {
+    float: right;
+    margin: 3%;
+    border: 3px solid #e5c07b;
+    border-radius: 15px;
+    max-height: 225px;
+    max-width: 225px;
+}
+a {
+    color: #be5046;
+}
+a:link {
+    color: #be5046;
+    text-decoration: none;
+}
+a:visited {
+    color: #be5046;
+}
+a:hover {
+    color:#e5c07b;
+}
+ul {
+    list-style: none;
+}
+li {
+    font-size: 24px;
+}
+li::before {
+    content: "• ";
+    color: #e5c07b;
+}
+p {
+    font-size: 24px;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.blog a {
+    color: #8FBCBB;
+}
+.blog a:link {
+    color: #8FBCBB;
+}
+.blog a:hover {
+    color: #81A1C1;
+}
+code {
+    font-size: 16px;
+    display: inline-block;
+    background-color: #1C2330;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 3%;
+}
+a.button {
+    float: right;
+    color: #aaaaff;
+    background-color: #1C2330;
+    padding: 15px 32px;
+    border-radius: 30px;
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<title>Leonardo Groos</title>
+<description>Leonardo's RSS Feed</description>
+<language>en-us</language>
+<link>http://4.tcp.ngrok.io:17303/HTML/Site/rss.xml</link>
+<atom:link href="http://4.tcp.ngrok.io:17303/HTML/Site/rss.xml" rel="self" type="application/rss+xml"/>
+<channel>
+  <item>
+    <title>How to setup a website on your own PC with Docker</title>
+    <link>http://4.tcp.ngrok.io:17303/HTML/Site/blog/setup-website-docker.html</link>
+    <description><![CDATA[ <h2>What is Docker?</h2> <p>If you already know what Docker is, click <a>here</a></p> <p>Think of Docker as a lightweight virtual machine that you can run on system startup. There are a lot of images to choose from, some with specific purposes like to run a Web Server or to install a specific app.</p> <p>Docker is great if you want to self host stuff without polluting your PC with config files, logs, etc</p> <h2>Installing Docker</h2> <p>On Debian/Ubuntu</p><code>sudo apt install docker</code> <p>On Fedora 34</p><code>Follow <a href="https://docs.docker.com/engine/install/fedora/#install-using-the-repository">this</a> guide</code> <p>On Arch/Manjaro</p><code>sudo pacman -S docker</code> <p>Starting/Enabling Docker service</p><code>sudo systemctl enable --now docker.service</code> <p>On Windows 10</p><code>Follow <a href="https://docs.docker.com/docker-for-windows/install/">this</a> guide</code> <h2>Installing and running a image</h2> <p>For this tutorial I will be using the official Debian image but you can choose another image <a href="https://hub.docker.com/">here</a></p> <p>You can pull the image using this command</p> <code>docker pull debian</code> <p>To run the image run this command. You can change the name to whatever you want, you can also change the ports but I don't recommend doing it</p> <code>docker run -t -d -p 80:80 -p 443:443 --name website debian:latest</code> <h2>Installing packages inside the container</h2> <p>To run a bash shell inside the container run</p> <code>docker exec -it website bash</code> <p>Now let's install some packages</p> <code>apt update && apt install nginx certbot python3-certbot python3-openssl openssl python3-certbot-nginx nano && service start nginx</code> <h2>Checking if it works</h2> <p>On your host machine open your browser and access <a href="localhost">localhost</a></p> <p>If that doesn't work allow port 80 on your firewall and try again</p> <h2>Configuring nginx</h2> <p>The directory of the nginx website is probably <code style="margin-left: 0;">/var/www/html</code> and the config files are on <code style="margin-left: 0;">/etc/nginx</code></p> ]]></description>
+  </item>
+  <item>
+    <title>Pass: the BEST password manager available (and it's FREE)</title>
+    <description> <h2>About Pass and GPG</h2> <p>Pass uses your GPG key to encrypt and decrypt the passwords that you save. This way only you (or other people who have your private key) can view the passwords</p> <p>There are many plugins to use with Pass. I'll cover some of them on this article</p> <h2>How to install GPG and Pass</h2> <p>Arch Linux: <code>sudo pacman -S gnupg pass</code></p> <p>Debian/Ubuntu: <code>sudo apt install gnupg pass</code></p> <p>Fedora: <code>sudo dnf install gnupg pass</code></p> <h2>How to setup GPG and Pass</h2> <p>First we have to setup your GPG key, to do run</p> <code>gpg --full-gen-key</code> <p>This will generate a private and a public key <b>NEVER</b> send your private key to anyone</p> <p>Select option 1 and fill the required information. You are not creating a account or something like that, the email address is only for identification (you can even type a fake email and name)</p> <p>To setup Pass run</p> <code>pass init <i>email address you used to setup GPG</i></code> <h2>How to use Pass</h2> <p>To add a password to Pass run</p> <code>pass add <i>nameofthepass</i></code> <p>To generate a random password run</p> <code>pass generate <i>nameofthepass</i></code> <p>To view your stored password run</p> <code>pass <i>nameofthesavedpass</i></code> <p>To save more than a password run (for example username, email, url)</p> <code>pass add -m <i>nameofthepass</i></code> <p>To save passwords on "folders" run</p> <code>pass add <i>group/nameofthepass</i></code> <p>To copy a password to the clipboard run</p> <code>pass -c <i>nameofthesavedpass</i></code> <p>To remove a password run</p> <code>pass remove <i>nameofthesavedpass</i></code> <h2>Pass GUI</h2> <p>If you wish you can use pass with a GUI using <a href="https://qtpass.org/">qtpass</a></p> <p>You can also use <a href="https://github.com/cdown/passmenu">passmenu</a> for a dmenu/rofi menu</p> <p>There are also browser extensions like <a href="https://github.com/browserpass/browserpass-extension">BrowserPass</a></p> <h2>Some Pass plugins</h2> <ul> <li><a href="https://github.com/roddhjav/pass-import">pass-import</a> is a great plugin if you used another password manager before Pass</li> <li><a href="https://github.com/tadfisher/pass-otp">pass-otp</a> is a alternative to google authenticator</li> </ul> <h2>More information</h2> <p>If you need more information you can <a href="../index.html#contato">contact me</a></p></description>
+  </item>
+  <item>
+    <title>My daily workflow</title>
+    <description>      <h2>Some of the tools and applications I daily drive</h2>
+      <p>I run a self built desktop tower and a standard Thinkpad T480</p>
+      <h3>PC Hardware</h3>
+      <ul>
+        <li>Ryzen 7 5700</li>
+        <li>RX 7600</li>
+        <li>32GB 2667Mhz</li>
+        <li>Gigabyte B550M-K</li>
+      </ul>
+
+      <h3>Software</h3>
+      <ul>
+        <li>Both my machines run NixOS. Both utilizing my hand made flake hosted on my private git server so that they can be easily and safely managed and updated</li>
+        <li>My WM of choice is my custom build of dwl</li>
+        <li>My C/C++ compiler of choice is clang</li>
+        <li>Foot is my terminal</li>
+        <li>And bemenu is my applauncher/menu app</li>
+        <li>I use Brave and Librewolf as my web browsers, with Brave bein the main one</li>
+        <li>I do all of my coding on a neovim's distro called <a href="https://nvchad.com/">NvChad</a></li>
+        <li>My shell is a heavily configured ZSH</li>
+        <li>Gopass is my password manager</li>
+        <li>I mostly try to use functional software, usually lightweight and prefer CLI apps</li>
+      </ul>
+</description>
+</channel>
+</rss>
