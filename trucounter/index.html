@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="description" content="Clean split-screen counter with black background and white font">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Trucounter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <!-- Upper Half -->
+    <section id="upper-half" class="half" role="button" tabindex="0" aria-label="Upper counter, click to increment">
+      <div class="content">
+        <span class="count" id="upper-count" aria-live="polite">0</span>
+      </div>
+      <button class="sub-btn" id="upper-minus" title="Subtract 1" aria-label="Subtract 1 from upper counter">−</button>
+    </section>
+
+    <!-- Center Divider Bar -->
+    <div class="divider" role="toolbar" aria-label="Controls">
+      <button class="divider-btn" id="btn-flip" title="Flip upper counter 180°" aria-label="Flip upper counter orientation">180°</button>
+      <button class="divider-btn" id="btn-reset" title="Reset both counters to 0" aria-label="Reset counters to 0">RESET</button>
+    </div>
+
+    <!-- Lower Half -->
+    <section id="lower-half" class="half" role="button" tabindex="0" aria-label="Lower counter, click to increment">
+      <div class="content">
+        <span class="count" id="lower-count" aria-live="polite">0</span>
+      </div>
+      <button class="sub-btn" id="lower-minus" title="Subtract 1" aria-label="Subtract 1 from lower counter">−</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
